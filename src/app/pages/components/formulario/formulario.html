@@ -1,0 +1,20 @@
+<form [formGroup]="form" (ngSubmit)="create()">
+    <div>
+        <label>Title: </label>
+        <input type="text" formControlName="title">
+    </div>
+
+    <div>
+        <label>Channel: </label>
+        <input type="text" formControlName="channel">
+    </div>
+
+    <div>
+        <label>Rating: </label>
+        <input type="text" formControlName="rating">
+    </div>
+    <button type="submit" [disabled]="form.invalid">Enviar</button>
+</form>
+
+<h3>Respuesta del post</h3>
+<pre>{{ created | json }}</pre>

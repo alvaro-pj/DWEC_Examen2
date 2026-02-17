@@ -1,0 +1,13 @@
+<h2>Listado de Series</h2>
+
+<ul>
+  @for (serie of series$ | async; track serie.id) {
+    <li>
+      <h3>{{ serie.title }}</h3>
+      <p>{{ serie.channel }}</p>
+      <p>{{ serie.rating }}</p>
+    </li>
+  } @empty {
+    <li>No hay series</li>
+  }
+</ul>
